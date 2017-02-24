@@ -1,0 +1,86 @@
+1) Write a program to accepts two numbers from stdin and find all the odd as well as even
+   numbers present in between them.
+
+import java.util.*;
+class Oddeven
+{
+
+public static void main(String[] args)
+{
+int[] odd=new int[100];
+int[] even=new int[100];
+int p=0,q=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the range of numbers:");
+int m=sc.nextInt();
+int n=sc.nextInt();
+for(int i=m;i<=n;i++)
+{
+if(i%2==0)
+{
+even[p]=i;
+p++;
+}
+else
+{
+odd[q]=i;
+q++;
+}
+}
+System.out.println("Odd numbers in given range:");
+for(int a=0;a<odd.length;a++)
+{
+    if(odd[a]!=0)
+System.out.println(odd[a]);
+}
+System.out.println("Even numbers in given range:");
+for(int a=0;a<even.length;a++)
+{
+     if(even[a]!=0)
+System.out.println(even[a]);
+}
+}
+}
+
+2)Joe is scared to go to school.When her dad asked the reason, Joe said she is unable to complete the task given by her teacher. 
+  The task was to find the “first 10 multiples” of the number entered from stdin. 
+
+import java.util.*;
+class Mul
+{
+
+public static void main(String[] args)
+{
+
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+for(int p=1;p<=10;p++)
+{
+    System.out.println(n+" x "+p+" = "+(n*p));
+}
+}
+}
+
+3)Write   a   program   consisting   method   sum()   and   demonstrate   the   concept   of   method 
+  overloading using this method.
+
+import java.util.*;
+class Sum{  
+  static int sum(int p,int q)
+  {
+   return p+q;
+  }  
+  static int sum(int p,int q,int r)
+  {
+    return p+q+r;
+  }  
+}  
+class Overloading{  
+public static void main(String[] args){  
+    int a = Sum.sum(8,9);
+    System.out.println(a);  
+    int b = Sum.sum(7,8,9);
+    System.out.println(b);  
+ }
+}  
+
